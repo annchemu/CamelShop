@@ -247,7 +247,7 @@
             save(){
                 try {
                     axios
-                    .post('http://candy-shop-backend.onrender.com/api/products', this.newProduct)
+                    .post('https://candy-shop-backend.onrender.com/api/products', this.newProduct)
                     .then((response) => console.log(response))
                     this.fetchProducts()
                     this.add_dialog = false
@@ -278,8 +278,8 @@
             //Step 2: send the updated products object in state to the backend
             update(){
                 try {
-                    axios
-                    .put('http://candy-shop-backend.onrender.com/api/products/' + this.editProductItems.id, this.editProductItems)
+                    axios 
+                    .put('https://candy-shop-backend.onrender.com/api/products/' + this.editProductItems.id, this.editProductItems)
                     .then((response) => console.log(response))
                     this.fetchProducts()
                     this.edit_dialog = false

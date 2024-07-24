@@ -109,7 +109,7 @@ const actions = {
 	async fetchProducts({ commit }) {
 		try {
 		  const data = await axios.get(
-			"http://candy-shop-backend.onrender.com/api/products" // base url + endpoint
+			"https://candy-shop-backend.onrender.com/api/products" // base url + endpoint
 		  );
 		  commit("SET_PRODUCTS", data.data);
 		} catch (error) {
